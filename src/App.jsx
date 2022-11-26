@@ -1,34 +1,45 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
-
+import { Box, Center, Circle, Text } from "@chakra-ui/react";
+import { BsGithub, BsLinkedin } from "react-icons/bs";
+import CodingAnimation from "./components/codingAnimation";
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+    <Box h="100vh" backgroundRepeat="no-repeat" backgroundSize="cover" backgro>
+      <Center>
+        <Box
+          display={{ sm: "flex" }}
+          flexDirection={{ sm: "column", md: "row", base: "row" }}
+        >
+          <Center flexDir="column">
+            <Text fontWeight="bold">Site em construção</Text>
+            <Text>Em breve mais novidades sobre meu portifolio</Text>
+          </Center>
+          <CodingAnimation />
+        </Box>
+      </Center>
+      <Box position="absolute" bottom="0" w="full" mb={1}>
+        <Center gap={5}>
+          <p>
+            Desenvolvido por
+            <strong> Ismael Elias</strong> | &#9889;
+          </p>
+          <a href="https://github.com/ismaeElias" target="blank">
+            <Circle size="40px" bg="gray.300" boxShadow="md">
+              <BsGithub></BsGithub>
+            </Circle>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/ismael-eliass/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Circle size="40px" bg="gray.300" boxShadow="md">
+              <BsLinkedin></BsLinkedin>
+            </Circle>
+          </a>
+        </Center>
+      </Box>
+    </Box>
+  );
 }
 
-export default App
+export default App;
