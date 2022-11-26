@@ -20,7 +20,7 @@ function Header() {
                 cursor="default"
             >
                 <Text fontSize={"lg"} fontWeight="bold" color="orange.400">ISMAEL ELIAS</Text>
-                <Text fontSize={"sm"}>DESENVOLVEDOR FULL-STACK</Text>
+                <Text fontSize={"sm"}>DESENVOLVEDOR FULL-STACK - <strong>SITE EM CONSTRUÇÃO</strong></Text>
             </Flex>
             <Flex gap="4"
                   alignItems="center">
